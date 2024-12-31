@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Physics Laboratory</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        body {
+            color: #333;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #2c3e50;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #1abc9c;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, #34495e, #1abc9c);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .hero a {
+            padding: 10px 20px;
+            background: #e67e22;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .hero a:hover {
+            background: #d35400;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+
+        section p {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .feature {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .feature h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .feature p {
+            font-size: 1em;
+            color: #333;
+        }
+
+/* 3D 模型容器樣式 */
+.sketchfab-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 100%;
+    height: 300px; /* 可根據需求調整高度 */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sketchfab-container iframe {
+    width: 100%; /* 可調整為 100% 或其他比例 */
+    height: 100%;
+    border: none;
+}
+
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Digital Physics Laboratory</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#3d">3D Model</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Digital Physics Laboratory</h1>
+        <p>Bringing advanced radar technology to physics education.</p>
+        <a href="#about">Learn More</a>
+    </section>
+
+    <section id="about">
+        <h2>About the Project</h2>
+        <p>This project integrates millimeter-wave radar technology, modern electronics, and Python-based software to create a hands-on, immersive educational experience for students learning STEM subjects.</p>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="features-list">
+            <div class="feature">
+                <h3>High-Precision Sensing</h3>
+                <p>Utilizes 24 GHz radar for real-time, non-contact motion detection.</p>
+            </div>
+            <div class="feature">
+                <h3>Real-Time Analysis</h3>
+                <p>Process data instantly with our Python scripts, delivering meaningful insights.</p>
+            </div>
+            <div class="feature">
+                <h3>Modular Design</h3>
+                <p>Flexible PCB layout and firmware for various experiments and configurations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="3d">
+        <h2>Explore the Hardware</h2>
+        <p>Interact with our 3D PCB model to understand the hardware in detail.</p>
+        <div class="sketchfab-container">
+            <iframe
+                title="Pcb_design"
+                frameborder="0"
+                allowfullscreen
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                src="https://sketchfab.com/models/bb71b2880ede425a85362e3ccb4fe15b/embed">
+            </iframe>
+        </div>
+    </section>
+    
+
+    <section id="education">
+        <h2>Educational Value</h2>
+        <p>This system supports STEM education by enabling students to learn about physics (SHM, resonance), electronics (circuit design), and programming (data analysis).</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Digital Physics Laboratory. All rights reserved.</p>
+    </footer>
+</body>
+</html>
