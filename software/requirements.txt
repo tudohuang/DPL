@@ -1,4 +1,5 @@
-numpy
+PySide6
 matplotlib
+numpy
 scipy
 pyserial
